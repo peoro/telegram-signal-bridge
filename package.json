@@ -7,11 +7,15 @@
 	"scripts": {
 		"start": "node index.js"
 	},
-	"keywords": ["bridge", "telegram", "signal"],
+	"keywords": [
+		"bridge",
+		"telegram",
+		"signal"
+	],
 	"author": "peoro",
 	"license": "MIT",
 	"dependencies": {
 		"dbus-next": "^0.10.2",
-		"telegraf": "^4.4.2"
+		"telegraf": "^4.12.2"
 	}
 }
