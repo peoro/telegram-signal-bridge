@@ -1,7 +1,7 @@
 ### Project template
 # Config
-/config*.js
-!/config.example.js
+.env*
+!.env.example
 
 # Jetbrains (all)
 .idea/

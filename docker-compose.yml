@@ -1,0 +1,14 @@
+services:
+  telegram-signal-bridge:
+    build: .
+    image: 'telegram-signal-bridge:0.0.1-alpine'
+    environment:
+      - SIGNAL_ACCOUNT=${SIGNAL_ACCOUNT}
+      - SIGNAL_GROUP=${SIGNAL_GROUP}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - TELEGRAM_GROUP=${TELEGRAM_GROUP}
+    volumes:
+      - .:/telegram-signal-bridge
+      - ${SIGNALCLI_CONFIG_VOL}:/home/node/.local/share/signal-cli
+volumes:
+  signal-cli-volume:
