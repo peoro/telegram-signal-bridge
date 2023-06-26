@@ -1,7 +1,7 @@
 services:
   telegram-signal-bridge:
     build: .
-    image: 'telegram-signal-bridge:0.0.1-alpine'
+    image: 'telegram-signal-bridge:0.0.2-alpine'
     environment:
       - SIGNAL_ACCOUNT=${SIGNAL_ACCOUNT}
       - SIGNAL_GROUP=${SIGNAL_GROUP}

@@ -1,0 +1,5 @@
+services:
+  telegram-signal-bridge:
+    platform: linux/arm64/v8
+    image: 'telegram-signal-bridge:0.0.2-alpine-arm64'
+    command: ["-t", "20"]
