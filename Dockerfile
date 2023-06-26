@@ -10,8 +10,10 @@ FROM --platform=linux/arm64 alpine:3.18 as libsignal-build-arm64
 
 ARG LIBSIGNAL_VERSION
 ARG SIGNALCLI_VERSION
+# Fix memory usage by using git cli, see https://github.com/tonistiigi/binfmt/issues/122#issuecomment-1359175441
+ARG CARGO_NET_GIT_FETCH_WITH_CLI=true
 
-RUN apk add curl openjdk17-jdk gradle protoc build-base cmake clang-dev && \
+RUN apk add curl openjdk17-jdk gradle protoc build-base cmake clang-dev git && \
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rustup-init.sh && \
     sh rustup-init.sh --default-toolchain beta -q -y
 
