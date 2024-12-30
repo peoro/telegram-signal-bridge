@@ -16,7 +16,7 @@ It uses a telegram bot on one side and relies on [signa-cli](https://github.com/
 2.2. Disable [privacy mode](https://core.telegram.org/bots#privacy-mode) for the bot.
 2.3. Set the bot's token in `config.js`'s `telegram.token`.
 
-3. Install and configure [signa-cli](https://github.com/AsamK/signal-cli):
+3. Install and configure [signal-cli](https://github.com/AsamK/signal-cli):
 3.1. Install it using whatever method you prefer (e.g. the ArchLinux AUR [signal-cli](https://aur.archlinux.org/packages/signal-cli/) package).
 3.2. Connect it to the Signal network. Follow its documentation for more info.
 3.3. Run it in in dbus/daemon mode: `signal-cli -u PHONE_NUMBER daemon`
