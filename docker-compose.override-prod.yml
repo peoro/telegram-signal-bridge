@@ -1,0 +1,4 @@
+services:
+  telegram-signal-bridge:
+    image: '${DOCKER_IMAGE_PROD}:0.0.3-alpine'
+    command: ["-t", "10"]

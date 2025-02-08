@@ -1,12 +1,16 @@
 services:
   telegram-signal-bridge:
     build: .
-    image: 'telegram-signal-bridge:0.0.2-alpine'
+    image: 'telegram-signal-bridge:0.0.3-alpine'
     environment:
       - SIGNAL_ACCOUNT=${SIGNAL_ACCOUNT}
       - SIGNAL_GROUP=${SIGNAL_GROUP}
       - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
       - TELEGRAM_GROUP=${TELEGRAM_GROUP}
+    ulimits: # Fixes dbus launch issues - see https://gitlab.freedesktop.org/dbus/dbus/-/issues/441#note_1721753
+      nofile:
+        soft: 1024
+        hard: 1024
     volumes:
       - .:/telegram-signal-bridge
       - ${SIGNALCLI_CONFIG_VOL}:/home/node/.local/share/signal-cli

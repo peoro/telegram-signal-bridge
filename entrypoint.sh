@@ -21,5 +21,5 @@ do
 done
 
 exec dbus-run-session -- sh -c \
-"signal-cli -a ${SIGNAL_ACCOUNT} daemon&
+"signal-cli -a ${SIGNAL_ACCOUNT} daemon --dbus&
 echo 'Waiting ${sleep_time}s for signal-cli to start' && sleep ${sleep_time} && npm run start"

@@ -1,0 +1,5 @@
+services:
+  telegram-signal-bridge:
+    platform: linux/arm64/v8
+    image: '${DOCKER_IMAGE_PROD}:0.0.3-alpine-arm64'
+    command: ["-t", "10"]
