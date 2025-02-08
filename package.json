@@ -16,6 +16,6 @@
 	"license": "MIT",
 	"dependencies": {
 		"dbus-next": "^0.10.2",
-		"telegraf": "^4.12.2"
+		"telegraf": "^4.16.3"
 	}
 }
