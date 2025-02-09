@@ -1,5 +1,9 @@
 services:
   telegram-signal-bridge:
     platform: linux/arm64/v8
-    image: 'telegram-signal-bridge:0.0.3-alpine-arm64'
+    build:
+      context: .
+      args:
+        BUILD_ENV: prod
+    image: '${DOCKER_IMAGE_PROD}:0.0.3-alpine-arm64'
     command: ["-t", "20"]

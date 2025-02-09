@@ -3,8 +3,8 @@ services:
     build:
       context: .
       args:
-        BUILD_ENV: dev
-    image: 'telegram-signal-bridge:0.0.3-alpine'
+        BUILD_ENV: prod
+    image: '${DOCKER_IMAGE_PROD}:0.0.3-alpine'
     environment:
       - SIGNAL_ACCOUNT=${SIGNAL_ACCOUNT}
       - SIGNAL_GROUP=${SIGNAL_GROUP}
@@ -15,7 +15,6 @@ services:
         soft: 1024
         hard: 1024
     volumes:
-      - .:/telegram-signal-bridge
       - ${SIGNALCLI_CONFIG_VOL}:/home/node/.local/share/signal-cli
 volumes:
   signal-cli-volume:
