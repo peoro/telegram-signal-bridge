@@ -6,4 +6,5 @@ services:
       args:
         BUILD_ENV: prod
     image: '${DOCKER_IMAGE_PROD}:0.0.3-alpine-arm64'
-    command: ["-t", "20"]
+    command: ["-t", "${START_DELAY_PROD_ARM64}"]
+    restart: unless-stopped

@@ -5,6 +5,8 @@ services:
       args:
         BUILD_ENV: prod
     image: '${DOCKER_IMAGE_PROD}:0.0.3-alpine'
+    command: ["-t", "${START_DELAY_PROD}"]
+    restart: unless-stopped
     environment:
       - SIGNAL_ACCOUNT=${SIGNAL_ACCOUNT}
       - SIGNAL_GROUP=${SIGNAL_GROUP}

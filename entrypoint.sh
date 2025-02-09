@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-sleep_time=5
+sleep_time=10
 
 while getopts "t:" option
 do
