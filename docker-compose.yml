@@ -1,6 +1,9 @@
 services:
   telegram-signal-bridge:
-    build: .
+    build:
+      context: .
+      args:
+        BUILD_ENV: dev
     image: 'telegram-signal-bridge:0.0.3-alpine'
     environment:
       - SIGNAL_ACCOUNT=${SIGNAL_ACCOUNT}
