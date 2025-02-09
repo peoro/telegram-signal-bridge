@@ -12,8 +12,8 @@ RUN apk add --no-cache dbus openjdk21-jre signal-cli
 FROM base_common AS base_telegram-signal-bridge_prod
 
 ARG GIT_REPO='https://github.com/peoro/telegram-signal-bridge'
-# If you want to use a tag, specify it directly, but if you want to use a branch, precede it with "refs/heads/":
-ARG GIT_TAG='refs/heads/main'
+# You can specify a branch instead of a tag but a tag is prefered (full ref like 'refs/heads/<branch>' works too)
+ARG GIT_TAG='main'
 
 ONBUILD RUN mkdir /telegram-signal-bridge && chown -R 1000: /telegram-signal-bridge && cd /telegram-signal-bridge &&\
             apk add --no-cache curl && apk add --no-cache gosu --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing &&\
