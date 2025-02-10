@@ -1,3 +1,4 @@
 Dockerfile
-docker-compose.yml
+docker-compos*.yml
 entrypoint.sh
+.github/
