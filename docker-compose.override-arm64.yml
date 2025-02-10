@@ -5,6 +5,6 @@ services:
       context: .
       args:
         BUILD_ENV: prod
-    image: '${DOCKER_IMAGE_PROD}:0.0.3-alpine-arm64'
+    image: '${DOCKER_IMAGE_PROD}:v0.1.0-beta.1'
     command: ["-t", "${START_DELAY_PROD_ARM64}"]
     restart: unless-stopped

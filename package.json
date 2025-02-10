@@ -1,6 +1,6 @@
 {
 	"name": "telegram-signal-bridge",
-	"version": "1.0.0",
+	"version": "0.1.0-beta.1",
 	"description": "A Telegram to Signal bridge",
 	"main": "index.js",
 	"type": "module",
