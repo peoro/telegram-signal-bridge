@@ -9,7 +9,7 @@ on:
   schedule:
     - cron: '37 17 * * *'
   push:
-    branches: [ "main", "docker-alpine-multiarch" ] # TODO: don't forget to remove this branch after testing
+    branches: [ "main" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
   pull_request:
