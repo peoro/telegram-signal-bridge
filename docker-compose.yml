@@ -4,7 +4,7 @@ services:
       context: .
       args:
         BUILD_ENV: prod
-    image: '${DOCKER_IMAGE_PROD}:v0.1.0-beta.1'
+    image: '${DOCKER_IMAGE_PROD}:v0.1.0-beta.2'
     command: ["-t", "${START_DELAY_PROD}"]
     restart: unless-stopped
     environment:
