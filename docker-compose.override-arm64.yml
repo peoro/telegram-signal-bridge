@@ -1,0 +1,10 @@
+services:
+  telegram-signal-bridge:
+    platform: linux/arm64/v8
+    build:
+      context: .
+      args:
+        BUILD_ENV: prod
+    image: '${DOCKER_IMAGE_PROD}:v0.1.0-beta.4'
+    command: ["-t", "${START_DELAY_PROD_ARM64}"]
+    restart: unless-stopped

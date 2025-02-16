@@ -1,0 +1,13 @@
+services:
+  telegram-signal-bridge:
+    platform: linux/arm64/v8
+    build:
+      context: .
+      args:
+        BUILD_ENV: dev
+    image: 'telegram-signal-bridge:dev-arm64'
+    command: ["-t", "${START_DELAY_DEV_ARM64}"]
+    restart: no
+    volumes:
+      - .:/telegram-signal-bridge
+      - ${SIGNALCLI_CONFIG_VOL}:/home/node/.local/share/signal-cli

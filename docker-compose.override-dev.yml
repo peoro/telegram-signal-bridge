@@ -1,0 +1,12 @@
+services:
+  telegram-signal-bridge:
+    build:
+      context: .
+      args:
+        BUILD_ENV: dev
+    image: 'telegram-signal-bridge:dev-alpine'
+    command: ["-t", "${START_DELAY_DEV}"]
+    restart: no
+    volumes:
+      - .:/telegram-signal-bridge
+      - ${SIGNALCLI_CONFIG_VOL}:/home/node/.local/share/signal-cli
